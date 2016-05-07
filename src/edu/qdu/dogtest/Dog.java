@@ -1,31 +1,24 @@
 package edu.qdu.dogtest;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
-public class Dog {
-	private int age;
-	public int getAge() {
-		return age;
+
+
+public class Dog extends Pet{
+	public Dog(String name){
+		//调用父类的方法
+		super(name);
+		//setName（name）；
 	}
-	public void setAge(int age) {
-		if(age<0||age>40){
-			throw new InputMismatchException("please enter the true age");
-		}
-		else
-			this.age = age;
-//		try{
-//			
-//			if(age<0||age>40){
-//				throw new InputMismatchException("please enter the true age");
-//			}
-//			else
-//				this.age = age;
-//				
-//		}catch(InputMismatchException e){
-//				//System.out.println(e.getMessage());
-//			e.printStackTrace();
-//		}catch(Exception e){
-//			System.out.println("error");
-//		}
+	protected String bark(){
+		return "在汪汪叫";
 	}
+	public void lookDoor(){
+		System.out.println("look after the home");
+	}
+	
+//	@Override
+//	protected String bark() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+    
 }
