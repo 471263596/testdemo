@@ -1,3 +1,5 @@
+package end.qdu.duotaitest;
+
 import java.util.Scanner;
 
 public class Test3 {
